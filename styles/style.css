@@ -1,7 +1,11 @@
 *{
-  max-width: 576px;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+max-width: 576px;
+margin: 0 auto;
 }
 
 @font-face {
@@ -26,187 +30,199 @@ header {
   height: auto;
   flex-wrap: nowrap;
   justify-content: space-between;
+}
 
-  nav {
-    background-color: #000;
-  }
-  .navbar {
+header nav {
+  background-color: #000;
+}
+
+header .navbar {
   width: 100%;
   padding: 0.5rem;
   align-items: center;
   background-color: #000;
-  }
-  .navbar-brand {
-    img {
-      height: 5vh;
-      display: flex;
-      align-self: center;
-      justify-content: flex-start;
-      margin: auto;
-    }
-  }
-  .navbar-collapse {
-    background-color: #000;
-    text-align: center;
-  }
-  .navbar .nav-link {
-    font-size: 1rem;
-    padding: 0.5rem 0.8rem;
-    color: #fff !important;
-    font-family: "publicmed";
-  }
-  .navbar-nav li {
-    list-style: none;
-  }
 }
 
+header .navbar-brand img {
+  height: 5vh;
+  display: flex;
+  align-self: center;
+  justify-content: flex-start;
+  margin: auto;
+}
 
-main {
-  margin: 1vw;
-  img {
-    width: 100%;
-    height: auto;
-  }
+header .navbar-collapse {
+  background-color: #000;
+  text-align: center;
+}
 
-  #fraseinicio {
-    justify-content: center;
-    font-family: "publicreg";
-    color: #9d9d9d;
-    margin: 2rem;
-    text-align: center;
-  }
+header .navbar .nav-link {
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  color: #fff !important;
+  font-family: "publicmed";
+}
 
-  .titulos {
-    height: 8vh;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    h2 {
-      font-family: "publicbold";
-      font-size: 3.5vh;
-      color: #fff;
-      margin: auto;
-    }
-  }
+header .navbar-nav li {
+  list-style: none;
+}
 
-  #especialidades {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    gap: 3vh;
-    column-gap: 1vw;
-    article {
-      width: 90%;
-      height: 30vh;
-      border: solid 0.5px;
-      border-color: #9d9d9d;
-      border-radius: 15px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1019607843);
-      display: grid;
-      grid-template-rows: 2fr 1r 1fr;
-    }
+main img {
+  width: 100%;
+  height: auto;
+}
 
-    .especialidad {
-      font-family: "publicbold";
-      grid-row: 2/3;
-    }
-    .description {
-      font-family: "publicreg";
-      grid-row: 3/4;
-    } 
-  }
+main #fraseinicio {
+  display: flex;
+  justify-content: center;
+  font-family: "publicreg";
+  color: #9d9d9d;
+  margin: 2rem;
+  text-align: center;
+  font-size: 1rem;
+}
 
-  iframe {
-    width: 90%;
-    height: 40vh;
-    justify-items: center;
-    margin: 1.5rem;
-  }
+main .titulos {
+  height: 8vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
 
-  .contacto {
-    display: flex;
-    font-family: "publicreg";
-    font-size: 2vh;
-    color: #9d9d9d;
-    justify-content: center;
-  }
+main .titulos h2 {
+  font-family: "publicbold";
+  font-size: 1.5rem;
+  color: #fff;
+  margin: auto;
+}
 
-  .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-  }
+main #especialidades {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 3vh;
+  column-gap: 1vw;
+}
 
-  .whatsapp-float svg {
-    width: 55px;
-  }
+main #especialidades article {
+  width: 90%;
+  height: 30vh;
+  border: solid 0.5px;
+  border-color: #9d9d9d;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1019607843);
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+}
 
+main #especialidades .especialidad {
+  font-family: "publicbold";
+  grid-row: 2/3;
+}
+
+main #especialidades .description {
+  font-family: "publicreg";
+  grid-row: 3/4;
+}
+
+main iframe {
+  width: 90%;
+  height: 40vh;
+  justify-items: center;
+  margin: 1.5rem;
+}
+
+main .contacto {
+  display: flex;
+  font-family: "publicreg";
+  font-size: 2vh;
+  color: #9d9d9d;
+  justify-content: center;
+}
+
+main .whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+main .whatsapp-float svg {
+  width: 55px;
 }
 
 footer {
   background-color: #000;
   height: auto;
-  img {
-    height: 4vh;
-    margin-top: 2vh;
-    margin-left: 2vw;
-  }
-  .sitemap {
-    margin-top: 4vh;
-    ul {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      li {
-        list-style: none;
-        padding: 1vh;
-        a {
-          text-decoration: none;
-          font-family: "publicreg";
-          color: #9d9d9d;
-          font-size: 2vh;
-        }
-        #pageinicio {
-          grid-column: 1/2;
-        }
-        #pagenosotros {
-          grid-column: 1/2;
-        }
-        #pagecontacto {
-          grid-column: 2/3;
-        }
-        #pagepreguntas {
-            grid-column: 2/3;
-        }
-      }
-    }
-  }
+}
 
-  .footersecundario {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
+footer img {
+  height: 4vh;
+  margin-top: 2vh;
+  margin-left: 2vw;
+}
 
-  .footerdatoscontacto {
-    display: flex;
-    font-family: "publicreg";
-    font-size: 2vh;
-    color: #9d9d9d;
-    padding: 0.2rem;
-    margin-left: 5vw;
-  }
+footer .sitemap {
+  margin-top: 4vh;
+}
 
-  .copy {
-    padding-bottom: 2vh;
-    display: flex;
-    justify-content: center;
-    font-family: "publicreg";
-    color: #393939;
-    font-size: 1.5vh;
-  }
+footer .sitemap ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer .sitemap ul li {
+  list-style: none;
+  padding: 1vh;
+}
+
+footer .sitemap ul li a {
+  text-decoration: none;
+  font-family: "publicreg";
+  color: #9d9d9d;
+  font-size: 2vh;
+}
+
+footer .sitemap ul li #pageinicio {
+  grid-column: 1/2;
+}
+
+footer .sitemap ul li #pagenosotros {
+  grid-column: 1/2;
+}
+
+footer .sitemap ul li #pagecontacto {
+  grid-column: 2/3;
+}
+
+footer .sitemap ul li #pagepreguntas {
+  grid-column: 2/3;
+}
+
+footer .footersecundario {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+footer .footerdatoscontacto {
+  display: flex;
+  font-family: "publicreg";
+  font-size: 2vh;
+  color: #9d9d9d;
+  padding: 0.2rem;
+  margin-left: 5vw;
+}
+
+footer .copy {
+  padding-bottom: 2vh;
+  display: flex;
+  justify-content: center;
+  font-family: "publicreg";
+  color: #393939;
+  font-size: 1.5vh;
 }
 
 /*main paginas secundarias*/
@@ -362,10 +378,171 @@ footer {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1019607843);
   background-color: #f5f2f2c0;
   margin: 10vw 1vh;
-  p {
-    padding: 2vh;
-    justify-self: center;
-    font-family: "publicbold";
-    font-size: 2.5vh;
+}
+
+.contactodudas p {
+  padding: 2vh;
+  justify-self: center;
+  font-family: "publicbold";
+  font-size: 1.25rem;
+}
+
+
+@media (min-width: 577px) {
+  body {
+    max-width: 1200px;
+  }
+
+  header .navbar-brand img {
+    height: 4vh;
+  }
+
+  header .navbar .nav-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  main #fraseinicio {
+    max-width: 80%;
+    margin: 3rem auto;
+    font-size: 1.5rem;
+  }
+
+  main .titulos {
+    height: 10vh;
+  }
+
+  main .titulos h2 {
+    font-size: 2rem;
+  }
+
+  main #especialidades {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  main #especialidades article {
+    height: 32vh;
+  }
+
+  main #especialidades .especialidad {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  main #especialidades .description {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  main iframe {
+    width: 70%;
+    height: 45vh;
+    margin: 3rem auto;
+    display: block;
+  }
+
+  main .contacto {
+    font-size: 1rem;
+  }
+
+  main .whatsapp-float svg {
+    width: 65px;
+  }
+
+  .pretitulo {
+    font-size: 1rem;
+  }
+
+  .titulo {
+    font-size: 3rem;
+  }
+
+  .historia {
+    font-size: 1.1rem;
+    max-width: 900px;
+  }
+
+  .equipo {
+    font-size: 2.2rem;
+  }
+
+  .profesionales {
+    width: 70%;
+  }
+
+  .nombre {
+    font-size: 1.2rem;
+  }
+
+  .cargo {
+    font-size: 1rem;
+  }
+
+  .descripcion {
+    font-size: 0.95rem;
+  }
+
+  .contactate {
+    max-width: 700px;
+    margin: 5rem auto;
+    padding: 2rem;
+  }
+
+  .form-label {
+    font-size: 1rem;
+  }
+
+  .boton {
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  .datoscontacto {
+    font-size: 1rem;
+  }
+
+  .titulopreguntas {
+    font-size: 3rem;
+  }
+
+  .textopreguntas {
+    font-size: 1rem;
+    max-width: 800px;
+  }
+
+  .accordion {
+    max-width: 900px;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+  }
+
+  .contactodudas {
+    max-width: 700px;
+    margin: 5rem auto;
+  }
+
+  .contactodudas p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  footer .sitemap ul {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 10rem;
+  }
+
+  footer .sitemap ul li a {
+    font-size: 1rem;
+  }
+
+  footer .footerdatoscontacto {
+    font-size: 1rem;
+  }
+
+  footer .copy {
+    font-size: 0.85rem;
   }
 }
