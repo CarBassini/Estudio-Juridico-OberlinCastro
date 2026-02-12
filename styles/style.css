@@ -55,6 +55,7 @@ header .navbar .nav-link {
   color: #9d9d9d !important;
   font-family: "publicmed";
   text-transform: uppercase;
+  text-align: center;
 }
 
 header .navbar .nav-link:hover{
@@ -198,7 +199,7 @@ main iframe {
 main .contacto {
   display: flex;
   font-family: "publicreg";
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #9d9d9d;
   justify-content: center;
 }
@@ -220,9 +221,9 @@ footer {
 }
 
 footer img {
-  height: 4vh;
+  height: 6vh;
   margin-top: 2vh;
-  margin-left: 2vw;
+  margin-left: 4vw;
 }
 
 footer .sitemap {
@@ -243,7 +244,7 @@ footer .sitemap ul li a {
   text-decoration: none;
   font-family: "publicreg";
   color: #9d9d9d;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 footer .sitemap ul li #pageinicio {
@@ -324,6 +325,10 @@ footer .copy {
   font-size: 2.5rem;
   margin-bottom: 5vh;
   margin-left: 2vw;
+}
+
+#profesionales {
+  margin: auto;
 }
 
 .profesionales {
