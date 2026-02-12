@@ -15,9 +15,10 @@
 </head>
 
 <body>
-  <header>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg">
+  <header id="header">
+
+    <nav id="navbar" class="navbar navbar-expand-md navbar-dark">
       <div class="container-fluid">
 
         <a class="navbar-brand" href="../index.html">
@@ -46,6 +47,7 @@
             </li>
           </ul>
         </div>
+
       </div>
     </nav>
 
@@ -60,32 +62,34 @@
 
     <div class="linea"></div>
 
+    <section class="formulariocontacto">
+      <form action="https://formsubmit.co/oberlincastroabogados@gmail.com" method="POST" class="row g-3">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="../index.html">
 
-    <form action="https://formsubmit.co/oberlincastroabogados@gmail.com" method="POST" class="row g-3">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="../index.html">
+        <div class="col-md-6">
+          <label class="form-label">Nombre y Apellido</label>
+          <input type="text" name="nombre" class="form-control" required>
+        </div>
 
-      <div class="col-md-6">
-        <label class="form-label">Nombre y Apellido</label>
-        <input type="text" name="nombre" class="form-control" required>
-      </div>
+        <div class="col-md-6">
+          <label class="form-label">Email</label>
+          <input type="email" name="email" class="form-control" required>
+        </div>
 
-      <div class="col-md-6">
-        <label class="form-label">Email</label>
-        <input type="email" name="email" class="form-control" required>
-      </div>
+        <div class="col-12">
+          <label class="form-label">Mensaje</label>
+          <textarea name="mensaje" class="form-control" rows="4" required></textarea>
+        </div>
 
-      <div class="col-12">
-        <label class="form-label">Mensaje</label>
-        <textarea name="mensaje" class="form-control" rows="4" required></textarea>
-      </div>
+        <div class="col-12">
+          <button class="boton" type="submit">
+            Enviar mensaje
+          </button>
+        </div>
+      </form>
+    </section>
 
-      <div class="col-12">
-        <button class="boton" type="submit">
-          Enviar mensaje
-        </button>
-      </div>
-    </form>
 
     <section class="contactate">
       <div class="datoscontacto">

@@ -1,11 +1,13 @@
 *{
   padding: 0;
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-max-width: 576px;
-margin: 0 auto;
+  max-width: 576px;
+  overflow-x: hidden;
+  margin: 0;
 }
 
 @font-face {
@@ -23,53 +25,99 @@ margin: 0 auto;
   src: url(../assets/PublicSans-Medium.ttf);
 }
 
+@font-face {
+  font-family: "trajanbold";
+  src: url(../assets/TrajanPro-Bold.otf);
+}
 
-header {
-  background-color: #000;
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: auto;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  z-index: 1000;
 }
 
-header nav {
+#navbar {
   background-color: #000;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
 }
 
-header .navbar {
-  width: 100%;
-  padding: 0.5rem;
-  align-items: center;
-  background-color: #000;
-}
-
-header .navbar-brand img {
+.navbar-brand img {
   height: 5vh;
-  display: flex;
-  align-self: center;
-  justify-content: flex-start;
-  margin: auto;
-}
-
-header .navbar-collapse {
-  background-color: #000;
-  text-align: center;
 }
 
 header .navbar .nav-link {
-  font-size: 1rem;
-  padding: 0.5rem 0.8rem;
-  color: #fff !important;
+  font-size: .85rem;
+  padding: 0.6rem 0.8rem;
+  color: #9d9d9d !important;
   font-family: "publicmed";
+  text-transform: uppercase;
+}
+
+header .navbar .nav-link:hover{
+  color: #fff !important;
 }
 
 header .navbar-nav li {
   list-style: none;
 }
 
-main img {
+.hero {
+  position: relative;
   width: 100%;
-  height: auto;
+  height: 100vh;
+  overflow: hidden;
+  transition: height 0.1s linear;
+  margin-top: 0;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.85)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0;
+}
+
+.hero-overlay h1 {
+  font-family: "publicbold";
+  color: #fff;
+  font-size: clamp(2rem, 6vw, 4rem);
+  letter-spacing: 0.2em;
+}
+
+.hero-overlay p {
+  font-family: "publicmed";
+  letter-spacing: 0.3em;
+  margin-top: 1rem;
+}
+
+header .hero-overlay h1 {
+  font-family: "trajanbold";
+  font-size: 3rem;
+}
+
+#mainindex {
+  position: relative;
+  z-index: 2;
+  margin-top: 120vh;
 }
 
 main #fraseinicio {
@@ -83,7 +131,7 @@ main #fraseinicio {
 }
 
 main .titulos {
-  height: 8vh;
+  height: 15vh;
   background-color: #000;
   display: flex;
   justify-content: center;
@@ -110,7 +158,6 @@ main #especialidades {
 main #especialidades article {
   width: 90%;
   height: 30vh;
-  border: solid 0.5px;
   border-color: #9d9d9d;
   border-radius: 15px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1019607843);
@@ -118,13 +165,26 @@ main #especialidades article {
   grid-template-rows: 2fr 1fr 1fr;
 }
 
+main #especialidades img {
+  width: 30%;
+  height: auto;
+  justify-self: center;
+  align-self: center;
+}
+
 main #especialidades .especialidad {
   font-family: "publicbold";
+  color: #000;
+  font-size: 1rem;
+  text-align: center;
   grid-row: 2/3;
 }
 
 main #especialidades .description {
   font-family: "publicreg";
+  color: #9d9d9d;
+  font-size: 0.8rem;
+  text-align: center;
   grid-row: 3/4;
 }
 
@@ -138,7 +198,7 @@ main iframe {
 main .contacto {
   display: flex;
   font-family: "publicreg";
-  font-size: 2vh;
+  font-size: 1.2rem;
   color: #9d9d9d;
   justify-content: center;
 }
@@ -183,7 +243,7 @@ footer .sitemap ul li a {
   text-decoration: none;
   font-family: "publicreg";
   color: #9d9d9d;
-  font-size: 2vh;
+  font-size: 1.2rem;
 }
 
 footer .sitemap ul li #pageinicio {
@@ -222,32 +282,36 @@ footer .copy {
   justify-content: center;
   font-family: "publicreg";
   color: #393939;
-  font-size: 1.5vh;
+  font-size: 1rem;
 }
 
 /*main paginas secundarias*/
 .pretitulo {
   font-family: "publicbold";
   color: #4455a0;
-  font-size: 1.8vh;
-  margin-top: 4vh;
+  font-size: 1rem;
+  margin-top: 15vh;
+  margin-left: 2vw;
 }
 
 .titulo {
   font-family: "publicbold";
   color: #000;
-  font-size: 4.5vh;
+  font-size: 2.5rem;
+  margin-left: 2vw;
 }
 
 .historia {
+  width: 95%;
   font-family: "publicmed";
   color: #000;
-  font-size: 2.5vh;
-  margin: 4vh 0;
+  font-size: 1.5rem;
+  text-align: justify;
+  margin: 4vh 2vw;
 }
 
 .linea {
-  width: 15vw;
+  width: 15%;
   height: 3px;
   background-color: #4455a0;
   margin-top: 1rem;
@@ -257,8 +321,9 @@ footer .copy {
 .equipo {
   font-family: "publicbold";
   color: #000;
-  font-size: 3.5vh;
+  font-size: 2.5rem;
   margin-bottom: 5vh;
+  margin-left: 2vw;
 }
 
 .profesionales {
@@ -269,29 +334,46 @@ footer .copy {
   justify-self: center;
 }
 
+.profesionales #fotoprofesional {
+  width: 70%;
+  border-radius: 50%;
+  display: flex;
+  margin: auto;
+  justify-items: center;
+}
+
 .nombre {
   font-family: "publicbold";
   color: #4455a0;
-  font-size: 2.5vh;
-  margin: 0 1vh;
+  font-size: 2rem;
+  margin: 0 2vh;
 }
 
 .cargo {
   font-family: "publicmed";
   color: #9d9d9d;
-  font-size: 2vh;
-  margin-left: 1vh;
+  font-size: 1rem;
+  margin-left: 2vh;
 }
 
 .descripcion {
   font-family: "publicreg";
   color: #000;
-  font-size: 2vh;
-  margin: 1vh;
+  font-size: 1rem;
+  margin: 2vh;
   padding-bottom: 2vh;
+  text-align: justify;
 }
 
 /*main pagina contacto*/
+.formulariocontacto {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin-left: 3vw;
+  margin-top: 10vh;
+}
+
 .form-label {
   font-family: "publicmed";
   font-size: 2vh;
@@ -315,12 +397,15 @@ footer .copy {
 }
 
 .contactate {
+  width: 80%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  border-color: #9d9d9d;
   border-radius: 15px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1019607843);
-  background-color: #f5f2f2c0;
-  margin: 10vw 1vh;
+  margin: 10vw auto;
 }
 
 .datoscontacto {
@@ -329,7 +414,6 @@ footer .copy {
   color: #000;
   padding: 0.5rem;
   margin-top: 2vw;
-  margin-left: 2vw;
 }
 
 .textocontacto {
@@ -342,22 +426,25 @@ footer .copy {
   font-family: "publicbold";
   color: #000;
   font-size: 4.5vh;
-  margin-top: 5vh;
+  margin-top: 15vh;
+  margin-left: 2vw;
 }
 
 .textopreguntas {
   font-family: "publicreg";
   font-size: 2vh;
   color: #9d9d9d;
+  margin-left: 2vw;
 }
 
 .accordion {
-  max-width: 700px;
-  margin: auto;
+  max-width: 90%;
+  margin: 2vh auto;
 }
 
 .accordion-button {
   font-weight: 600;
+  margin-left: 1vh;
 }
 
 .accordion-button:not(.collapsed) {
@@ -375,9 +462,9 @@ footer .copy {
 
 .contactodudas {
   border-radius: 15px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1019607843);
-  background-color: #f5f2f2c0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1019607843);  
   margin: 10vw 1vh;
+  padding: 2vh;
 }
 
 .contactodudas p {
@@ -390,16 +477,26 @@ footer .copy {
 
 @media (min-width: 577px) {
   body {
-    max-width: 1200px;
+    max-width: 1920px;
+  }
+
+  header {
+  height: 12vh;
+  align-content: center;
   }
 
   header .navbar-brand img {
-    height: 4vh;
+    height: 6vh;
   }
 
   header .navbar .nav-link {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0.5rem 1.2rem;
+  }
+
+  main .estudio {
+    height: auto;
+    position: relative;
   }
 
   main #fraseinicio {
@@ -409,7 +506,9 @@ footer .copy {
   }
 
   main .titulos {
-    height: 10vh;
+    height: 15vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
   }
 
   main .titulos h2 {
@@ -422,7 +521,7 @@ footer .copy {
   }
 
   main #especialidades article {
-    height: 32vh;
+    height: 45vh;
   }
 
   main #especialidades .especialidad {
@@ -442,25 +541,8 @@ footer .copy {
     display: block;
   }
 
-  main .contacto {
-    font-size: 1rem;
-  }
-
   main .whatsapp-float svg {
     width: 65px;
-  }
-
-  .pretitulo {
-    font-size: 1rem;
-  }
-
-  .titulo {
-    font-size: 3rem;
-  }
-
-  .historia {
-    font-size: 1.1rem;
-    max-width: 900px;
   }
 
   .equipo {
@@ -468,25 +550,7 @@ footer .copy {
   }
 
   .profesionales {
-    width: 70%;
-  }
-
-  .nombre {
-    font-size: 1.2rem;
-  }
-
-  .cargo {
-    font-size: 1rem;
-  }
-
-  .descripcion {
-    font-size: 0.95rem;
-  }
-
-  .contactate {
-    max-width: 700px;
-    margin: 5rem auto;
-    padding: 2rem;
+    width: 50%;
   }
 
   .form-label {
@@ -529,20 +593,23 @@ footer .copy {
     text-align: center;
   }
 
+  footer img {
+  height: 7vh;
+  }
+
   footer .sitemap ul {
     grid-template-columns: repeat(2, 1fr);
     margin-left: 10rem;
-  }
-
-  footer .sitemap ul li a {
-    font-size: 1rem;
   }
 
   footer .footerdatoscontacto {
     font-size: 1rem;
   }
 
-  footer .copy {
-    font-size: 0.85rem;
+  footer .footersecundario {
+  display: flex;
+  margin: 5vh 10vw;
+  justify-content: space-around;
   }
+
 }
